@@ -17,12 +17,6 @@ describe "my_select" do
     end
   end
 
-  it "selects the items in the collection to which the block returns true" do
-    expect(my_select(nums) do |num|
-      num.even?
-    end).to eq([2, 4])
-  end
-
   it 'does not modify the original collection' do
     my_select(nums) do |num|
       num.even?
